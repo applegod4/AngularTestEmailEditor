@@ -16,7 +16,7 @@ export class EmailService {
   }
 
   _generateText(textLength: number): String {
-    const text = '';
+    let text = '';
     const possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
     for (let i = 0; i < textLength; i++) {

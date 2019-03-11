@@ -25,7 +25,8 @@ export class EmailsEditorComponent {
   }
 
   _deleteObject(emailObject: String): void {
-    if (this.emailObjects.indexOf(emailObject) > -1) {
+    const index = this.emailObjects.indexOf(emailObject);
+    if (index > -1) {
       this.emailObjects.splice(index, 1);
     }
   }
