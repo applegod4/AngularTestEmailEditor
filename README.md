@@ -1,27 +1,67 @@
-# AngularTest
+# Тестовое задание на Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.3.
+### Оглавление
+1. [Описание задания](#Описание-задания)
+2. [Установка](#Установка)
 
-## Development server
+### Описание задания
+Необходимо реализовать angular-компонент, который будет представлять собой поле для ввода емэйлов, автоматически формирующее емэйлы в блоки.
+Нужно повторить поведение гугловской формы из окна "Совместный доступ", которое можно увидеть, если зайти Google Drive и на любом своем документе через контекстное меню вызвать пункт "Совместный доступ" (Share).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Требуемые поведение и реализация:
 
-## Code scaffolding
+Каждый введенный емэйл формируется в блок. Блок можно удалить.
+Блок формируется после нажатия Enter или установки запятой после емэйла, а также при потере фокуса полем ввода. Соответственно в блок может сформироваться любая строка.
+Ширина поля зависит от ширины родительского контейнера. Если контейнер меняет ширину, блоки с емэйлами должны перераспределиться по строкам.
+Вставленные через ctrl+V емэйлы должны формироваться в блоки.
+Невалидные емэйлы должны формироваться в блоки с красным подчеркиванием.
+При вводе большого кол-ва емэйлов появляется прокрутка.
+HTML должен выглядеть примерно следующим образом:
+<emails-editor ...attributes></emails-editor>
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<button ng-click="...">Add email</button>
 
-## Build
+<button ng-click="...">Get email count</button>
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+Где:
 
-## Running unit tests
+<emails-editor> — это реиспользуемая ангуляровская директива с изолированным скопом, ответственная только за редактирование списка емейлов.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Реализация директивы <emails-editor> должна обеспечивать возможность реиспользования этой директивы в любом angular-приложении.
 
-## Running end-to-end tests
+По клику на кнопку "add random email" в поле добавляется случайный емэйл сформированный в блок.
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+По клику на кнопку "get emails count" показывается alert с количеством введенных емэйлов 
 
-## Further help
+Отправка задания:
+Тестовое задание должно представлять собой законченный продукт и размещено по публично доступной ссылке.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Исходный код должен быть доступен через git или отправлен в zip-архиве.
+
+Собранная версия задания должна лежать в репозитории или zip-архиве.
+Описание к дизайну:
+Шрифт Open sans
+Размер заголовка 20рх
+Цвет кнопок 6699ff
+
+### Установка
+
+Загрузите этот репозиторий с помощью git clone
+```
+$ git clone https://github.com/applegod4/AngularTestEmailEditor.git
+```
+Перейдите в папку с проектом
+```
+$ cd AngularTestEmailEditor
+```
+Затем установите необходимые зависимости
+```
+$ npm install
+```
+Запустите приложение
+```
+$ ng serve
+```
+После успешной сборки приложение будет доступно по адресу http://localhost:4200/
+
+При возникновении ошибок обновите NodeJS и NPM. При разработке использовались NodeJS v10.2.1 и npm v6.1.0
