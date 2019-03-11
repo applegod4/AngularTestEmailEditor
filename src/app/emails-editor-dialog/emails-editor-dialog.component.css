@@ -1,0 +1,21 @@
+.dialog-window{
+  min-width: 500px;
+  width: 200px;
+  position: fixed;
+  left: calc(50% - 200px);
+  top: calc(50% - 200px);
+  box-shadow: 0 4px 8px rgba(0,0,0,.32), 0 8px 40px rgba(0,0,0,.4);
+}
+.dialog-window__body{
+  background-color: #F5F5F5;
+  padding: 29px 40px 30px 40px;
+}
+.dialog-window__header{
+  font-size: 20px;
+  margin-bottom: 34px;
+}
+.dialog-window__footer{
+  display: flex;
+  padding: 30px 40px 20px;
+}
+

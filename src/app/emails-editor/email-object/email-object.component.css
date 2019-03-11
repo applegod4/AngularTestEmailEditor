@@ -1,0 +1,21 @@
+.email-object__body{
+  display: inline-flex;
+  font-size: 14px;
+  border-radius: 20px;
+  background-color: #D4E4FF;
+  padding: 2px 10px 3px 10px;
+  align-items: center;
+}
+.email-object__cross-button{
+  cursor: pointer;
+  font-size: 11px;
+}
+.email-object__incorrect{
+  background-color: #FFFFFF;
+}
+.email-object__incorrect .email-object__text{
+  border-bottom: 2px dotted red;
+}
+.email-object__text{
+  margin-right: 10px;
+}

@@ -1,0 +1,17 @@
+.emails-editor__content{
+  background-color: #FFFFFF;
+  border-top: 1px solid #CCCCCC;
+  min-height: 100px;
+  padding: 6px 8px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+.emails-editor__input{
+  border: none;
+  outline: none;
+  padding-left: 10px;
+  font-size: 14px;
+}
+.emails-editor__input::placeholder{
+  color:#999999;
+}

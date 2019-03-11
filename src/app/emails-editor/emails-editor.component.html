@@ -1,0 +1,15 @@
+<div class="emails-editor-wrapper">
+  <div class="emails-editor__content" (click)="_focusOnInput()">
+    <app-email-object *ngFor="let emailObject of emailObjects"
+                      (deleteEmailObject)="_deleteObject($event)"
+                      [emailObject]="emailObject" ></app-email-object>
+    <input placeholder="{{placeholderText}}"
+           #emailInput
+           type="text"
+           class="emails-editor__input"
+           [(ngModel)]="inputModel"
+           (focusout)="_onFocusOut()"
+           (keyup)="_onKeyUp($event)"
+    >
+  </div>
+</div>

@@ -1,1 +1,44 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: opensans;
+  src: url(assets/fonts/opensans.ttf);
+}
+@font-face {
+  font-family: opensans;
+  src: url(assets/fonts/opensansbold.ttf);
+  font-weight: bold;
+}
+@font-face {
+  font-family: opensans;
+  src: url(assets/fonts/opensanslight.ttf);
+  font-weight: 300;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: opensans;
+}
+button{
+  border:none;
+  outline: none;
+}
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+.btn{
+  cursor: pointer;
+  padding: 7px 16px 10px 16px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-right: 20px;
+  font-weight: 300;
+}
+.btn_blue{
+  background-color: #6699ff;
+  color: white;
+}
